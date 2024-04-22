@@ -1,0 +1,35 @@
+header{
+    padding: 30px;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 50px;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+header img{
+    display: inline-block;
+    padding-right: 10px;
+    max-width: 56px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li{
+    padding-right: 25px;
+    white-space: nowrap;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
