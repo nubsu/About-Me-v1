@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     padding: 30px;
     background: black;
@@ -32,4 +36,67 @@ header nav ul li{
 nav a{
     text-decoration: none;
     color: white;
+    transition: color 0.3s ease;
+}
+
+nav a:hover{
+    color: red;
+}
+
+.fixedbg{
+    background-image: url(../images/vcu684cde8y01.jpg);
+    min-height: 175px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+body{
+    background-color: grey;
+}
+
+div h1{
+    font-size: 70px;
+    color: darkgrey;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    white-space: nowrap;
+}
+
+.split{
+    display: flex;
+}
+
+.smallside{
+    flex: 30%;
+    padding: 30px;
+}
+
+.bigside{
+    flex: 70%;
+    padding: 60px;
+    text-align: center;
+}
+
+.sideimage{
+    max-width: 400px;
+}
+
+div h2{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+    header nav ul{
+        padding-top: 20px;
+    }
+    .fixedbg{
+        min-height: 150px;
+    }
 }
