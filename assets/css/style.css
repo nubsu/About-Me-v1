@@ -9,6 +9,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 header h1{
@@ -25,11 +28,11 @@ header img{
 
 header nav ul{
     display: flex;
-    justify-content: flex-end;
 }
 
 header nav ul li{
-    padding-right: 25px;
+    padding-right: 12px;
+    padding-left: 12px;
     white-space: nowrap;
 }
 
@@ -51,42 +54,153 @@ nav a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    vertical-align: top;
+    padding-top: 90px;
+}
+
+.addspaceforheader{
+    min-height: 60px;
 }
 
 body{
-    background-color: grey;
+    background-image: url(../images/vcu684cde8y01.jpg);
+    min-height: 175px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 div h1{
+    padding: 20px;
     font-size: 70px;
-    color: darkgrey;
-    position: absolute;
+    color: lightgrey;
+    /* position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 20px; */
     white-space: nowrap;
 }
 
 .split{
     display: flex;
+    border-radius: 100px;
+    /* border: 2px solid darkred; */
 }
 
 .smallside{
-    flex: 30%;
-    padding: 30px;
+    flex: 40%;
+    padding: 20px;
 }
 
 .bigside{
-    flex: 70%;
+    flex: 60%;
     padding: 60px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sideimage{
-    max-width: 400px;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
 }
 
 div h2{
     font-size: 30px;
+    white-space: nowrap;
+    color: lightgrey;
+}
+
+div p{
+    padding: 20px;
+    font-size: 20px;
+    color: lightgrey;
+    /* -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: black; */
+}
+
+.work{
+    flex: 100%;
+    padding: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.app{
+    border-style: solid;
+    padding: 10px;
+    margin: 20px;
+    flex: 0 0 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 10px 10px 20px;
+    border-radius: 25px;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.app:hover{
+    transform: rotate(4deg);
+}
+
+.app h1{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.app img{
+    border-radius: 30px;
+    max-width: 350px;
+}
+
+.biggerapp{
+    border-style: solid;
+    padding: 10px 30px 0px 30px;
+    margin: 20px;
+    /* flex: 0 0 300px; */
+    transition: transform 0.3s ease;
+    box-shadow: 10px 10px 20px;
+    border-radius: 25px;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.biggerapp:hover{
+    transform: rotate(4deg);
+}
+
+.biggerapp h1{
+    font-size: 65px;
+    padding: 10px;
+}
+
+.biggerapp img{
+    border-radius: 30px;
+    max-width: 450px;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+div ul li a{
+    font-size: 40px;
+    color: lightgrey;
+    transition: color 0.3s ease;
+}
+
+div ul li a:hover{
+    color: red;
 }
 
 @media screen and (max-width: 768px){
@@ -98,5 +212,36 @@ div h2{
     }
     .fixedbg{
         min-height: 150px;
+    }
+    .split{
+        flex-direction: column;
+    }
+    .bigside{
+        padding: 30px;
+    }
+    .sideimage{
+        max-width: 230px;
+    }
+    div p{
+        font-size: 18px;
+        padding: 10px 0px 0px 0px;
+    }
+    .app h1{
+        font-size: 30px;
+    }
+    .app img{
+        max-width: 200px;
+    }
+    .biggerapp{
+        padding: 10px;
+    }
+    .biggerapp h1{
+        font-size: 45px;
+    }
+    .biggerapp img{
+        max-width: 350px;
+    }
+    div ul li a:hover{
+        color: red;
     }
 }
